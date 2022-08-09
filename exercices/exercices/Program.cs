@@ -9,6 +9,8 @@ namespace exercices
             string TheAlert = "";
             TheAlert = FindChar("ezeqsdb");   
             Console.WriteLine(TheAlert);
+
+            Console.WriteLine(IsSomme(1,2,4)); // return false
         }
 
         // https://www.w3resource.com/csharp-exercises/basic-algo/index.php • exercies 46 - verrification de chaine de caractère
@@ -29,6 +31,18 @@ namespace exercices
                 result += "Aucun des deux";
             }
             return result;
+        }
+
+        // https://www.w3resource.com/csharp-exercises/basic-algo/index.php • exercies 47 - Les nombres
+        public static bool IsSomme(int nbUn, int nbDeux, int nbTrois)
+        {
+            bool isSomme = false;
+            
+            if(nbUn + nbDeux == nbTrois)
+            {
+                isSomme = true;
+            }
+            return isSomme;
         }
     }
 }
