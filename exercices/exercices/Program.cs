@@ -11,11 +11,13 @@ namespace exercices
             Console.WriteLine(TheAlert);
 
             Console.WriteLine(IsSomme(1,2,4)); // return false
+            Console.WriteLine(IsBeforeTwenty(115, 50, 1)); // return true
         }
 
         // https://www.w3resource.com/csharp-exercises/basic-algo/index.php • exercies 46 - verrification de chaine de caractère
         public static string FindChar(string chaine)
         {
+            chaine = chaine.ToLower();
             string result = "";
 
             if(chaine.StartsWith('f'))
@@ -43,6 +45,12 @@ namespace exercices
                 isSomme = true;
             }
             return isSomme;
+        }
+
+        //Trouver si la difference des nombres est inférieure a 20 
+        public static bool IsBeforeTwenty(int a, int b, int c)
+        {
+            return Math.Abs(a-b) >=20 || Math.Abs(a-c) >= 20 || Math.Abs(b-c) >= 20;
         }
     }
 }
