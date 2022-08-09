@@ -12,6 +12,7 @@ namespace exercices
 
             Console.WriteLine(IsSomme(1,2,4)); // return false
             Console.WriteLine(IsBeforeTwenty(115, 50, 1)); // return true
+            Console.WriteLine(moveCharInString("coca"));
         }
 
         // https://www.w3resource.com/csharp-exercises/basic-algo/index.php • exercies 46 - verrification de chaine de caractère
@@ -51,6 +52,18 @@ namespace exercices
         public static bool IsBeforeTwenty(int a, int b, int c)
         {
             return Math.Abs(a-b) >=20 || Math.Abs(a-c) >= 20 || Math.Abs(b-c) >= 20;
+        }
+
+        public static string moveCharInString(string chaine)
+        {
+            if(chaine.Length > 2)
+            {
+                return chaine.Remove(0, 2) + chaine.Substring(0, 2); // retire les deux prmier caratère de lz chaine et ajoute les deux premier a la fin
+            }
+            else
+            {
+                return "Votre chaine de caratzire n'est pas assez longue.";
+            }
         }
     }
 }
