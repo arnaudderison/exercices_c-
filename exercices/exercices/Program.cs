@@ -12,7 +12,9 @@ namespace exercices
 
             Console.WriteLine(IsSomme(1,2,4)); // return false
             Console.WriteLine(IsBeforeTwenty(115, 50, 1)); // return true
-            Console.WriteLine(moveCharInString("coca"));
+            Console.WriteLine(MoveCharInString("coca"));
+
+            TenNbInTab();
         }
 
         // https://www.w3resource.com/csharp-exercises/basic-algo/index.php • exercies 46 - verrification de chaine de caractère
@@ -54,7 +56,7 @@ namespace exercices
             return Math.Abs(a-b) >=20 || Math.Abs(a-c) >= 20 || Math.Abs(b-c) >= 20;
         }
 
-        public static string moveCharInString(string chaine)
+        public static string MoveCharInString(string chaine)
         {
             if(chaine.Length > 2)
             {
@@ -65,5 +67,32 @@ namespace exercices
                 return "Votre chaine de caratzire n'est pas assez longue.";
             }
         }
+
+        //Ecrire un programme qui permet à l'utilisateur d'entrer 10 nombres qui seront stocker dans un tableau
+        public static void TenNbInTab()
+        {
+            int[] arr = new int[10];
+            int i;
+
+            for(i= 0; i < arr.Length; i++)
+            {
+                Console.WriteLine($"{i} tour(s) de boucle");
+                try
+                {
+                    arr[i] = Convert.ToInt32(Console.ReadLine()); // converti l'entrée utilsateur en nombre
+                }
+                catch
+                {
+                    Console.WriteLine("Vous devez entrer un nombre valide");
+                }
+                
+            }
+
+            for (i = 0; i < arr.Length; i++)
+            {
+                Console.Write($"{arr[i]}");
+            }
+        }
     }
+
 }
